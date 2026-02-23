@@ -30,12 +30,12 @@ jobs:
           docker-images: false
 
       - name: Checkout all repos with ref fallback
-        uses: walt-id/waltid-identity/.github/actions/checkout-repos@29f904ce0de831e02fe64507ebe284b02e66b50e
+        uses: walt-id/waltid-identity/.github/actions/checkout-repos@82398c887dbb154e23643fb10baec40545066cb6
         with:
           token: ${{ secrets.GH_ACCESS_TOKEN }}
 
       - name: Configure gradle
-        uses: walt-id/waltid-identity/.github/actions/gradle-setup-action@a4a92e12ee9b7396ee9a22083ff21b3277c627d6
+        uses: walt-id/waltid-identity/.github/actions/gradle-setup-action@82398c887dbb154e23643fb10baec40545066cb6
 
       - name: Clean and build with all tests
         if: ${{ runner.os != 'macos' }}
@@ -46,7 +46,7 @@ jobs:
 
       - name: Build iOS Simulator Framework (ARM64)
         if: ${{ runner.os == 'macos'}}
-        uses: walt-id/waltid-identity/.github/actions/gradle-ios@d3aa55fb102dadb48032778d6e1df9a8f9155261
+        uses: walt-id/waltid-identity/.github/actions/gradle-ios@82398c887dbb154e23643fb10baec40545066cb6
         with:
           waltid-directory: 'waltid-identity'
 
