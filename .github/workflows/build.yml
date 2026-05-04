@@ -43,7 +43,7 @@ jobs:
   ebsi-ct-v3:
     # disabled job because of ebsi certificate issues (expired certificate)
     if: false
-    uses: walt-id/waltid-identity/.github/workflows/ebsictv3.yml@70e59bbea44de0b3511bb6bd72faa553e92f7bcf
+    uses: walt-id/waltid-identity/.github/workflows/ebsictv3.yml@791377023486c714e54a7698368274df6b194fc8
     needs: [ version, docker, api-docker ]
     secrets: inherit
     with:
