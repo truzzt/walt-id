@@ -16,6 +16,6 @@ jobs:
         uses: walt-id/waltid-identity/.github/actions/gradle-setup-action@a4a92e12ee9b7396ee9a22083ff21b3277c627d6
 
       - name: Build iOS Simulator Framework (ARM64)
-        uses: walt-id/waltid-identity/.github/actions/gradle-ios@d3aa55fb102dadb48032778d6e1df9a8f9155261
+        uses: walt-id/waltid-identity/.github/actions/gradle-ios@fe5efb66931f36ab075d1f942c41193a177086b9
         with:
           waltid-directory: 'waltid-identity'
